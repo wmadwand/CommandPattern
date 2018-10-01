@@ -9,6 +9,16 @@ namespace Command
 		void Undo();
 	}
 
+	class NoCommand : ICommand
+	{
+		public void Execute()
+		{
+		}
+		public void Undo()
+		{
+		}
+	}
+
 	// Receiver - Получатель
 	class TV
 	{
@@ -46,7 +56,7 @@ namespace Command
 	{
 		ICommand command;
 
-		public Pult() { }
+		public Pult() { command = new NoCommand(); }
 
 		public void SetCommand(ICommand com)
 		{
@@ -55,11 +65,11 @@ namespace Command
 
 		public void PressButton()
 		{
-			command.Execute();
+			command?.Execute();
 		}
 		public void PressUndo()
 		{
-			command.Undo();
+			command?.Undo();
 		}
 	}
 
