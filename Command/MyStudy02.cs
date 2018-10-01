@@ -137,7 +137,7 @@ namespace CommandMS02
 	// client
 	public class Program
 	{
-		public static void Main(string[] args)
+		public static void Main222(string[] args)
 		{
 			// receivers
 			TV tv = new TV();
