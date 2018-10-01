@@ -140,9 +140,9 @@ namespace Command3
 		}
 	}
 
-	class Program
+	class Program3
 	{
-		static void Main(string[] args)
+		static void Main3(string[] args)
 		{
 			Programmer programmer = new Programmer();
 			Tester tester = new Tester();
