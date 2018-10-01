@@ -120,6 +120,8 @@ namespace CommandMS02
 			if (_commands.TryGetValue(button, out ICommand command))
 			{
 				command?.Execute();
+				// !!! or, if required, not to forget to make a copy of the command and Push the copy instead
+				// !!! just in case of next possible changes of the command - we pushed the command with the right state
 				_commandsHistory.Push(command);
 			}
 		}
