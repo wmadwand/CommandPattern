@@ -123,7 +123,7 @@ namespace CommandMS01
 	// client
 	public class Program
 	{
-		static void Main(string[] args)
+		static void Main22(string[] args)
 		{
 			TV tv = new TV(); // receiver
 			ICommand tvOnCommand = new TVOnCommand(tv); // concrete command
